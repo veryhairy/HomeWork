@@ -17,6 +17,8 @@ public class Login {
         boolean execute = prepare.execute();
         if (execute){
             System.out.println("登陆成功");
+        }else {
+            System.out.println("用户名或密码错误，请重试");
         }
         prepare.close();
         connection.close();
