@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>163yun</title>
+    <style>
+        #laoda{
+            background-color: white;
+            width: 1570px;
+            height: 750px;
+            position: absolute;
+            left: 172px;
+            top:190px;
+
+        }
+        .aaa{
+            position: absolute;
+            top: 100px;
+            left: 650px;
+            width: 23px;
+            height: 23px;
+        }
+        .bbb{
+            font-weight: bold;
+            font-size: 20px;
+            position: absolute;
+            top: 100px;
+            left: 680px;
+            color: blue;
+        }
+        #email{
+            width: 450px;
+            height: 50px;
+            position: absolute;
+            top: 180px;
+            left: 650px;
+        }
+        #ema{
+            font-size: 20px;
+            position: absolute;
+            top: 200px;
+            left: 510px;
+        }
+        #password{
+            width: 450px;
+            height: 50px;
+            position: absolute;
+            top: 280px;
+            left: 650px;
+        }
+        #pas{
+            font-size: 20px;
+            position: absolute;
+            top: 300px;
+            left: 510px;
+        }
+        #top{
+            background-color: white;
+            width: 100%;
+            height: 100px;
+        }
+        body{
+            background-color: #f7fffc;
+        }
+        .ccc{
+            position: absolute;
+            top: 380px;
+            left: 650px;
+        }
+        .ddd{
+            background-color: #3385ff;
+            width: 450px;
+            height: 50px;
+            position: absolute;
+            top: 480px;
+            left: 650px;
+        }
+        .eee{
+            color: white;
+            position: absolute;
+            top: 18px;
+            left: 200px;
+            font-weight: bold;
+        }
+        #条款{
+            font-weight: bold;
+            color: blue;
+        }
+        #tishi{
+            position: absolute;
+            top: 200px;
+            left: 1110px;
+            color: red;
+            display: none;
+        }
+        #tishi2{
+            position: absolute;
+            top: 300px;
+            left: 1110px;
+            color: red;
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+<div id="top"></div>
+
+<div id="laoda">
+    <img class="aaa" src="img/邮箱.png" height="200" width="200"/>
+    <a href=""class="bbb">邮箱号注册</a>
+    <div>
+    <label for="email" id="ema">邮箱地址</label>
+    <input id="email" placeholder="请输入邮箱地址" onfocus="inputFocus1()" onblur="inputBlur1()">
+    </div>
+    <div>
+        <label for="password" id="pas">登录密码</label>
+        <input id="password" placeholder="请输入登录密码"onfocus=" inputFocus2()" onblur="inputBlur2()">
+    </div>
+    <div class="ccc">
+        <input type="checkbox"> 同意并遵守
+        <a href="" id="条款">《服务条款》</a>
+    </div>
+    <div class="ddd">
+        <a href="#" id="bianse" class="eee" onclick="bianse()">下一步</a>
+    </div>
+    <div id="tishi">请输入邮箱地址</div>
+    <div id="tishi2">请输入6-14位密码</div>
+</div>
+</body>
+<script type="text/javascript">
+    var tishi = document.getElementById("tishi");
+    var tishi2 = document.getElementById("tishi2");
+    var ee = document.getElementById("bianse");
+    function inputFocus1() {
+        tishi.style.display="block";
+    }
+    function inputBlur1() {
+        tishi.style.display="none";
+    }
+
+    function inputFocus2() {
+        tishi2.style.display="block";
+    }
+    function inputBlur2() {
+        tishi2.style.display="none";
+    }
+    function bianse() {
+        ee.style.color="red";
+    }
+    
+</script>
+</html>
+<!--1，注册页面：-->
+<!--当input获得焦点时，后面就要红字提示。-->
+<!--2，提交按钮，当点击时，给一个边框或者背景色的改变。-->
+
+
+
