@@ -2,6 +2,7 @@ package web;
 
 import domain.User;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 import util.JdbcUtil;
 import org.apache.commons.dbutils.QueryRunner;
 
@@ -30,7 +31,7 @@ public class UserDao {
         Connection conn = null;
         conn = JdbcUtil.getConnection();
         try {
-            List<User> query = qr.query(conn, sql, new BeanListHandler<User>(User.class), username);
+            String query = qr.query(conn, sql, new ScalarHandler<String>(), username);
             if (query.equals(password)){
                 return true;
             }
