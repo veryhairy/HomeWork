@@ -20,8 +20,7 @@ import java.util.Map;
 @WebServlet(name = "web.BookServlet",urlPatterns = "/book")
 public class BookServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
-        if (session.getAttribute("username")==null){return;}
+
 
         Map<String, String[]> parameterMap = request.getParameterMap();
         Book book = new Book();

@@ -75,7 +75,8 @@
 <img src="img/163yun.png" class="left"/>
 <div class="right">
     <p>网易云登录</p>
-    <form action="login" method="post">
+    <form action="user" method="post">
+    <input type="hidden" name="method" value="login">
     <input class="shuru1" value="${cookie.username.value}" name="username" placeholder="网易云账号/网易云邮箱账号"> <br>
     <input class="shuru2" name="password" placeholder="登录密码">
     <input type="submit" class="bbb">
