@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="true"/>
+    <package name="homework" extends="struts-default">
+
+        <interceptors>
+            <interceptor name="logininterceptor" class="com.lanou3g.interceptor.LoginInterceptor"/>
+            <interceptor-stack name="default">
+                <interceptor-ref name="logininterceptor">
+                    <param name="excludeMethods">login</param>
+                </interceptor-ref>
+                <interceptor-ref name="defaultStack"/>
+            </interceptor-stack>
+        </interceptors>
+
+        <default-interceptor-ref name="default"/>
+
+        <action name="login" class="com.lanou3g.action.UserAction" method="login">
+            <result name="success">index.jsp</result>
+        </action>
+
+        <action name="query" class="com.lanou3g.action.UserAction" method="query">
+            <result name="success">index.jsp</result>
+            <result name="login">login.jsp</result>
+        </action>
+
+        <action name="queryById" class="com.lanou3g.action.UserAction" method="queryById">
+            <result name="success">update.jsp</result>
+            <result name="login">login.jsp</result>
+        </action>
+
+        <action name="update1" class="com.lanou3g.action.UserAction" method="update">
+            <result name="success">index.jsp</result>
+            <result name="login">login.jsp</result>
+        </action>
+
+        <action name="add" class="com.lanou3g.action.UserAction" method="add">
+            <result name="success">index.jsp</result>
+            <result name="login">login.jsp</result>
+        </action>
+    </package>
+
+</struts>
